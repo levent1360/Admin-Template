@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin Paneli</h2>
+            <p>Yönetim Sistemi</p>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+                <li>
+                    <a href="#" class="menu-toggle"><i class="fas fa-users"></i> <span>Kullanıcılar</span><i class="fas fa-chevron-down chevron"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-list"></i> <span>Kullanıcı Listesi</span></a></li>
+                        <li><a href="#"><i class="fas fa-user-plus"></i> <span>Yeni Kullanıcı</span></a></li>
+                        <li><a href="#"><i class="fas fa-user-check"></i> <span>Onay Bekleyenler</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu-toggle"><i class="fas fa-shopping-cart"></i> <span>Siparişler</span><i class="fas fa-chevron-down chevron"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-boxes"></i> <span>Tüm Siparişler</span></a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> <span>Kargo Takibi</span></a></li>
+                        <li><a href="#"><i class="fas fa-undo"></i> <span>İadeler</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu-toggle"><i class="fas fa-chart-bar"></i> <span>Analitik</span><i class="fas fa-chevron-down chevron"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-chart-line"></i> <span>Satış Raporu</span></a></li>
+                        <li><a href="#"><i class="fas fa-chart-pie"></i> <span>Kategori Analizi</span></a></li>
+                        <li><a href="#"><i class="fas fa-users-stats"></i> <span>Müşteri İstatistikleri</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu-toggle"><i class="fas fa-cog"></i> <span>Ayarlar</span><i class="fas fa-chevron-down chevron"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-sliders-h"></i> <span>Sistem Ayarları</span></a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> <span>Güvenlik</span></a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> <span>E-posta Ayarları</span></a></li>
+                        <li><a href="#"><i class="fas fa-database"></i> <span>Yedekleme</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> <span>Yardım</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <button class="toggle-btn" id="toggleSidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="user-menu" id="userMenu">
+            <div class="user-info">
+                <div class="user-avatar">MA</div>
+                <div class="user-name">Mehmet Aydın</div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#"><i class="fas fa-user"></i> Profilim</a>
+                <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
+                <a href="#"><i class="fas fa-bell"></i> Bildirimler</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+                <li>Ana Sayfa</li>
+                <li>Dashboard</li>
+            </ul>
+        </div>
+
+        <div class="stats-cards">
+            <div class="stat-card">
+                <div class="stat-icon" style="background-color: var(--primary);">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>1,254</h3>
+                    <p>Toplam Kullanıcı</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background-color: var(--success);">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>524</h3>
+                    <p>Yeni Siparişler</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background-color: var(--warning);">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>₺24,580</h3>
+                    <p>Toplam Gelir</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background-color: var(--danger);">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>8</h3>
+                    <p>Bekleyen İşlemler</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="left-column">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Son Siparişler</h2>
+                        <a href="#">Tümünü Gör</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sipariş No</th>
+                                <th>Müşteri</th>
+                                <th>Tarih</th>
+                                <th>Miktar</th>
+                                <th>Durum</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-7841</td>
+                                <td>Ahmet Yılmaz</td>
+                                <td>12 May 2023</td>
+                                <td>₺245.00</td>
+                                <td><span class="status active">Tamamlandı</span></td>
+                                <td>
+                                    <button class="btn-edit" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete" title="Sil"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-7840</td>
+                                <td>Ayşe Demir</td>
+                                <td>11 May 2023</td>
+                                <td>₺128.50</td>
+                                <td><span class="status active">Tamamlandı</span></td>
+                                <td>
+                                    <button class="btn-edit" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete" title="Sil"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-7839</td>
+                                <td>Mehmet Kaya</td>
+                                <td>10 May 2023</td>
+                                <td>₺342.00</td>
+                                <td><span class="status pending">Beklemede</span></td>
+                                <td>
+                                    <button class="btn-edit" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete" title="Sil"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-7838</td>
+                                <td>Zeynep Şahin</td>
+                                <td>09 May 2023</td>
+                                <td>₺189.75</td>
+                                <td><span class="status active">Tamamlandı</span></td>
+                                <td>
+                                    <button class="btn-edit" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete" title="Sil"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-7837</td>
+                                <td>Can Öztürk</td>
+                                <td>08 May 2023</td>
+                                <td>₺76.90</td>
+                                <td><span class="status pending">Beklemede</span></td>
+                                <td>
+                                    <button class="btn-edit" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete" title="Sil"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Son Aktiviteler</h2>
+                        <a href="#">Tümünü Gör</a>
+                    </div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Yeni kullanıcı kaydoldu</h4>
+                                <p>Ayşe Yıldız sisteme kaydoldu</p>
+                                <div class="activity-time">2 dakika önce</div>
+                            </div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Yeni sipariş alındı</h4>
+                                <p>#ORD-7842 numaralı sipariş oluşturuldu</p>
+                                <div class="activity-time">1 saat önce</div>
+                            </div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Sistem güncellemesi</h4>
+                                <p>Güvenlik güncellemesi yapıldı</p>
+                                <div class="activity-time">3 saat önce</div>
+                            </div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Rapor oluşturuldu</h4>
+                                <p>Mayıs ayı satış raporu hazırlandı</p>
+                                <div class="activity-time">5 saat önce</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal Dialog -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Siparişi Düzenle</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="orderId">Sipariş No</label>
+                    <input type="text" id="orderId" name="orderId" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="customerName">Müşteri Adı</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderDate">Tarih</label>
+                    <input type="text" id="orderDate" name="orderDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderAmount">Miktar</label>
+                    <input type="text" id="orderAmount" name="orderAmount" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderStatus">Durum</label>
+                    <select id="orderStatus" name="orderStatus" required>
+                        <option value="">Seçiniz</option>
+                        <option value="Tamamlandı">Tamamlandı</option>
+                        <option value="Beklemede">Beklemede</option>
+                        <option value="İptal">İptal</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel">İptal</button>
+                    <button type="submit" class="btn-save">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal confirm-modal">
+        <div class="modal-content confirm-content">
+            <div class="confirm-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2>Silmeyi Onayla</h2>
+            <p id="deleteMessage">Bu kaydı silmek istediğinize emin misiniz?</p>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" id="deleteCancelBtn">İptal</button>
+                <button type="button" class="btn-delete-confirm">Evet, Sil</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
